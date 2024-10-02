@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D36CB0862CAC630A00372C54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36CB0802CAC630A00372C54 /* Preview Assets.xcassets */; };
+		D36CB0872CAC630A00372C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36CB0822CAC630A00372C54 /* Assets.xcassets */; };
+		D36CB0882CAC630A00372C54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0832CAC630A00372C54 /* ContentView.swift */; };
+		D36CB0892CAC630A00372C54 /* PlanMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0842CAC630A00372C54 /* PlanMakerApp.swift */; };
+		D36CB0902CAC6DF300372C54 /* EjemploLlamadaRestaurantes.json in Resources */ = {isa = PBXBuildFile; fileRef = D36CB08F2CAC6DF300372C54 /* EjemploLlamadaRestaurantes.json */; };
+		D36CB0922CAC721800372C54 /* PlaceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0912CAC721800372C54 /* PlaceDTO.swift */; };
+		D36CB0942CAD4ABA00372C54 /* EjemploLlamadaDetalle.json in Resources */ = {isa = PBXBuildFile; fileRef = D36CB0932CAD4ABA00372C54 /* EjemploLlamadaDetalle.json */; };
+		D36CB0982CAD55BD00372C54 /* vistaMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0972CAD55BD00372C54 /* vistaMapa.swift */; };
+		D36CB09C2CAD9A4000372C54 /* vistaEjemplo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB09B2CAD9A4000372C54 /* vistaEjemplo.swift */; };
+		D36CB09E2CADA7D400372C54 /* MapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB09D2CADA7D400372C54 /* MapModels.swift */; };
+		D36CB0A22CADC19100372C54 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0A12CADC19100372C54 /* MapViewModel.swift */; };
+		D36CB0A42CADFAD700372C54 /* MapComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0A32CADFAD700372C54 /* MapComponent.swift */; };
+		D36CB0A62CAE051500372C54 /* SwifdddtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0A52CAE051500372C54 /* SwifdddtUIView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D36CB06F2CAC62A500372C54 /* PlanMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D36CB0802CAC630A00372C54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D36CB0822CAC630A00372C54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D36CB0832CAC630A00372C54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D36CB0842CAC630A00372C54 /* PlanMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMakerApp.swift; sourceTree = "<group>"; };
+		D36CB08F2CAC6DF300372C54 /* EjemploLlamadaRestaurantes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EjemploLlamadaRestaurantes.json; sourceTree = "<group>"; };
+		D36CB0912CAC721800372C54 /* PlaceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDTO.swift; sourceTree = "<group>"; };
+		D36CB0932CAD4ABA00372C54 /* EjemploLlamadaDetalle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EjemploLlamadaDetalle.json; sourceTree = "<group>"; };
+		D36CB0972CAD55BD00372C54 /* vistaMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vistaMapa.swift; sourceTree = "<group>"; };
+		D36CB09B2CAD9A4000372C54 /* vistaEjemplo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vistaEjemplo.swift; sourceTree = "<group>"; };
+		D36CB09D2CADA7D400372C54 /* MapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModels.swift; sourceTree = "<group>"; };
+		D36CB0A12CADC19100372C54 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		D36CB0A32CADFAD700372C54 /* MapComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponent.swift; sourceTree = "<group>"; };
+		D36CB0A52CAE051500372C54 /* SwifdddtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifdddtUIView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D36CB06C2CAC62A500372C54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D36CB0662CAC62A500372C54 = {
+			isa = PBXGroup;
+			children = (
+				D36CB0852CAC630A00372C54 /* PlanMaker */,
+				D36CB0702CAC62A500372C54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D36CB0702CAC62A500372C54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D36CB06F2CAC62A500372C54 /* PlanMaker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D36CB0812CAC630A00372C54 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D36CB0802CAC630A00372C54 /* Preview Assets.xcassets */,
+				D36CB08F2CAC6DF300372C54 /* EjemploLlamadaRestaurantes.json */,
+				D36CB0932CAD4ABA00372C54 /* EjemploLlamadaDetalle.json */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D36CB0852CAC630A00372C54 /* PlanMaker */ = {
+			isa = PBXGroup;
+			children = (
+				D36CB08E2CAC636900372C54 /* Views */,
+				D36CB08D2CAC635B00372C54 /* ViewModels */,
+				D36CB08C2CAC634F00372C54 /* Interactor */,
+				D36CB08B2CAC634700372C54 /* Interface */,
+				D36CB08A2CAC633F00372C54 /* Model */,
+				D36CB0952CAD4CEB00372C54 /* System */,
+				D36CB0812CAC630A00372C54 /* Preview Content */,
+				D36CB0822CAC630A00372C54 /* Assets.xcassets */,
+			);
+			path = PlanMaker;
+			sourceTree = "<group>";
+		};
+		D36CB08A2CAC633F00372C54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D36CB0912CAC721800372C54 /* PlaceDTO.swift */,
+				D36CB09D2CADA7D400372C54 /* MapModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D36CB08B2CAC634700372C54 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		D36CB08C2CAC634F00372C54 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D36CB08D2CAC635B00372C54 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D36CB0A12CADC19100372C54 /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D36CB08E2CAC636900372C54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D36CB0832CAC630A00372C54 /* ContentView.swift */,
+				D36CB0972CAD55BD00372C54 /* vistaMapa.swift */,
+				D36CB0A52CAE051500372C54 /* SwifdddtUIView.swift */,
+				D36CB09B2CAD9A4000372C54 /* vistaEjemplo.swift */,
+				D36CB0962CAD548300372C54 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D36CB0952CAD4CEB00372C54 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				D36CB0842CAC630A00372C54 /* PlanMakerApp.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		D36CB0962CAD548300372C54 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D36CB0A32CADFAD700372C54 /* MapComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D36CB06E2CAC62A500372C54 /* PlanMaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D36CB07D2CAC62A700372C54 /* Build configuration list for PBXNativeTarget "PlanMaker" */;
+			buildPhases = (
+				D36CB06B2CAC62A500372C54 /* Sources */,
+				D36CB06C2CAC62A500372C54 /* Frameworks */,
+				D36CB06D2CAC62A500372C54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlanMaker;
+			packageProductDependencies = (
+			);
+			productName = PlanMaker;
+			productReference = D36CB06F2CAC62A500372C54 /* PlanMaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D36CB0672CAC62A500372C54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					D36CB06E2CAC62A500372C54 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = D36CB06A2CAC62A500372C54 /* Build configuration list for PBXProject "PlanMaker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D36CB0662CAC62A500372C54;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D36CB0702CAC62A500372C54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D36CB06E2CAC62A500372C54 /* PlanMaker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D36CB06D2CAC62A500372C54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D36CB0862CAC630A00372C54 /* Preview Assets.xcassets in Resources */,
+				D36CB0942CAD4ABA00372C54 /* EjemploLlamadaDetalle.json in Resources */,
+				D36CB0902CAC6DF300372C54 /* EjemploLlamadaRestaurantes.json in Resources */,
+				D36CB0872CAC630A00372C54 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D36CB06B2CAC62A500372C54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D36CB0A62CAE051500372C54 /* SwifdddtUIView.swift in Sources */,
+				D36CB09C2CAD9A4000372C54 /* vistaEjemplo.swift in Sources */,
+				D36CB0982CAD55BD00372C54 /* vistaMapa.swift in Sources */,
+				D36CB09E2CADA7D400372C54 /* MapModels.swift in Sources */,
+				D36CB0882CAC630A00372C54 /* ContentView.swift in Sources */,
+				D36CB0A22CADC19100372C54 /* MapViewModel.swift in Sources */,
+				D36CB0892CAC630A00372C54 /* PlanMakerApp.swift in Sources */,
+				D36CB0A42CADFAD700372C54 /* MapComponent.swift in Sources */,
+				D36CB0922CAC721800372C54 /* PlaceDTO.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D36CB07B2CAC62A700372C54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D36CB07C2CAC62A700372C54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D36CB07E2CAC62A700372C54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlanMaker/Preview Content\"";
+				DEVELOPMENT_TEAM = L46T9NVJ2U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fmalourarte.PlanMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D36CB07F2CAC62A700372C54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlanMaker/Preview Content\"";
+				DEVELOPMENT_TEAM = L46T9NVJ2U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fmalourarte.PlanMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D36CB06A2CAC62A500372C54 /* Build configuration list for PBXProject "PlanMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D36CB07B2CAC62A700372C54 /* Debug */,
+				D36CB07C2CAC62A700372C54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D36CB07D2CAC62A700372C54 /* Build configuration list for PBXNativeTarget "PlanMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D36CB07E2CAC62A700372C54 /* Debug */,
+				D36CB07F2CAC62A700372C54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D36CB0672CAC62A500372C54 /* Project object */;
+}
