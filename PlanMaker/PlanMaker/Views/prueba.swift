@@ -9,7 +9,36 @@ import SwiftUI
 
 struct prueba: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            print("dd")
+        } label: {
+            Image("aquarium-4_result_2")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 52)
+        }
+        
+        Button {
+            print("dd")
+        } label: {
+            Image("aquarium-4_result_1")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 48)
+        }
+        
+        HStack {
+            ForEach(1 ..< 7) { _ in
+                Button {
+                    print("dd")
+                } label: {
+                    Image("aquarium-4_result_1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 52)
+                }
+            }
+        }
     }
 }
 

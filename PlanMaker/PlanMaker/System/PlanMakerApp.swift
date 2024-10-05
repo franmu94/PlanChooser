@@ -11,7 +11,7 @@ import SwiftUI
 struct PlanMakerApp: App {
     var body: some Scene {
         WindowGroup {
-            vista()
+            prueba()
         }
     }
 }

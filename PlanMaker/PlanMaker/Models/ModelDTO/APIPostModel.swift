@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+
+struct LocationRestriction: Codable {
+    struct Circle: Codable {
+        struct Center: Codable {
+            let latitude: Double
+            let longitude: Double
+        }
+        let center: Center
+        let radius: Int
+    }
+    let circle: Circle
+}
+
+struct SearchRequest: Codable {
+    let includedTypes: [String]
+    let maxResultCount: Int
+    let locationRestriction: LocationRestriction
+}
