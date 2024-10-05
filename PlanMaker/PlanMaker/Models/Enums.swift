@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum PlaceTypes: String, CaseIterable {
+enum PlaceType: String, CaseIterable {
     // Automotive
     case carDealer = "car_dealer"
     case carRental = "car_rental"
@@ -236,12 +236,70 @@ enum PlaceTypes: String, CaseIterable {
     case transitStation = "transit_station"
     case truckStop = "truck_stop"
     
-    func alfaVersion() -> [Self] {
+    static func alfaVersion() -> [Self] {
         [.restaurant,.cafe, .bar, .nightClub, .movieTheater, .amusementPark, .touristAttraction, .museum, .artGallery, .bowlingAlley, .park, .zoo, .aquarium, .casino, .eventVenue, .shoppingMall, .iceCreamShop, .sushiRestaurant, .fastFoodRestaurant]
+    }
+    
+    static func entertainmentAndRecreation() -> [PlaceType] {
+        [.nightClub, .movieTheater, .amusementPark, .touristAttraction, .museum, .artGallery, .bowlingAlley, .park, .zoo, .aquarium, .casino]
+    }
+    
+    static func foodAndDrink() -> [PlaceType] {
+        [.restaurant, .cafe, .bar, .iceCreamShop, .sushiRestaurant, .fastFoodRestaurant]
+    }
+    
+    static func shopping() -> [PlaceType] {
+        [.shoppingMall]
     }
     
 }
 
+extension PlaceType {
+    func displayText() -> String {
+        switch self {
+        case .restaurant:
+            return "Restaurante"
+        case .cafe:
+            return "Café"
+        case .bar:
+            return "Bar"
+        case .nightClub:
+            return "Discoteca"
+        case .movieTheater:
+            return "Cine"
+        case .amusementPark:
+            return "Parque de Atracciones"
+        case .touristAttraction:
+            return "Atracción Turística"
+        case .museum:
+            return "Museo"
+        case .artGallery:
+            return "Galería de Arte"
+        case .bowlingAlley:
+            return "Bolera"
+        case .park:
+            return "Parque"
+        case .zoo:
+            return "Zoológico"
+        case .aquarium:
+            return "Acuario"
+        case .casino:
+            return "Casino"
+        case .eventVenue:
+            return "Lugar de Eventos"
+        case .shoppingMall:
+            return "Centro Comercial"
+        case .iceCreamShop:
+            return "Heladería"
+        case .sushiRestaurant:
+            return "Sushi"
+        case .fastFoodRestaurant:
+            return "Comida Rápida"
+        default:
+            return ""
+        }
+    }
+}
 enum CategoryTypes {
     case automotive
     case business
@@ -260,7 +318,7 @@ enum CategoryTypes {
     case sports
     case transportation
     
-    func getTypes() -> [PlaceTypes] {
+    func getTypes() -> [PlaceType] {
             switch self {
             case .automotive:
                 return [.gasStation, .carRepair, .carRental, .carWash, .electricVehicleChargingStation, .parking, .carDealer, .restStop]

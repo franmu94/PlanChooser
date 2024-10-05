@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PlacesInteractorProtocol {
-    func getNearbyPlaces(includedTypes: [PlaceTypes], latitudeCenter: Double, longitudeCenter: Double, radius: Int) async throws -> [Place]  }
+    func getNearbyPlaces(includedTypes: [PlaceType], latitudeCenter: Double, longitudeCenter: Double, radius: Int) async throws -> [Place]  }
 
 struct PlacesInteractor: NetworkInteractor, PlacesInteractorProtocol {
     var session: URLSession
@@ -19,7 +19,7 @@ struct PlacesInteractor: NetworkInteractor, PlacesInteractorProtocol {
         self.session = session
     }
     
-    func getNearbyPlaces(includedTypes: [PlaceTypes],
+    func getNearbyPlaces(includedTypes: [PlaceType],
                          latitudeCenter: Double,
                          longitudeCenter: Double,
                          radius: Int) async throws -> [Place] {

@@ -8,38 +8,89 @@
 import SwiftUI
 
 struct TypesSelection: View {
-    
-    func getPreferredLocale() -> Locale {
-        guard let preferredIdentifier = Locale.preferredLanguages.first else {
-            return Locale.current
-        }
-        return Locale(identifier: preferredIdentifier)
-    }
-    
-    
+    @EnvironmentObject var vm: PlanMakerVM
+
+    var gridColums = [GridItem(), GridItem(), GridItem(), GridItem()]
     
     var body: some View {
-        Text(getPreferredLocale().language.languageCode?.identifier ?? "no prefer")
+        Text("Choose what you want to do")
+            .font(.system(size: 22, weight: .regular, design: .rounded))// Fuente redondeada minimalista
+            .frame(maxWidth: 200) // Limita el ancho del texto al de la imagen
+            .multilineTextAlignment(.center)
         
-        Text(Locale.current.language.languageCode!.identifier)
-        
-        Text(Locale.preferredLanguages.first!)
+        ScrollView {
+            Spacer(minLength: 64)
+            Text("Entertainment and Recreation")
+                .font(.system(size: 22, weight: .regular, design: .rounded))// Fuente redondeada minimalista
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal,32)
+                .padding(.vertical,16)
 
-        Button {
-            print(Locale(identifier: "es-ES"))
-        } label: {
-            Text("boton")
+            LazyVGrid(columns: gridColums, spacing: 20) {
+                ForEach(PlaceType.entertainmentAndRecreation(), id: \.self) { type in
+                    Button {
+                        if vm.containsType(type: type) {
+                            vm.quitType(type: type)
+                        } else {
+                            vm.addType(type: type)
+                        }
+                    } label: {
+                        TypeGridCell(type: type)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
+            .padding(.horizontal,20)
+            Text("Food and Drink")
+                .font(.system(size: 22, weight: .regular, design: .rounded))// Fuente redondeada minimalista
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal,32)
+                .padding(.vertical,16)
+
+            LazyVGrid(columns: gridColums, spacing: 20) {
+                ForEach(PlaceType.foodAndDrink(), id: \.self) { type in
+                    Button {
+                        if vm.containsType(type: type) {
+                            vm.quitType(type: type)
+                        } else {
+                            vm.addType(type: type)
+                        }
+                    } label: {
+                        TypeGridCell(type: type)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
+            .padding(.horizontal,20)
+            
+            Text("Shopping")
+                .font(.system(size: 22, weight: .regular, design: .rounded))// Fuente redondeada minimalista
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal,32)
+                .padding(.vertical,16)
+
+            LazyVGrid(columns: gridColums, spacing: 20) {
+                ForEach(PlaceType.shopping(), id: \.self) { type in
+                    Button {
+                        if vm.containsType(type: type) {
+                            vm.quitType(type: type)
+                        } else {
+                            vm.addType(type: type)
+                        }
+                    } label: {
+                        TypeGridCell(type: type)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
+            .padding(.horizontal,20)
         }
-
-        Text(Locale(identifier: Locale.preferredLanguages.first ?? "ddd").language.languageCode?.identifier ?? "")
-        Text(Locale.current.language.languageCode?.identifier ?? "Unknown")
-        
-        Text(Locale(identifier: Locale.preferredLanguages.first ?? "esdddd").language.languageCode?.identifier ?? "esddd")
     }
 }
 
 #Preview {
     TypesSelection()
+        .environmentObject(PlanMakerVM())
 }
 
 
