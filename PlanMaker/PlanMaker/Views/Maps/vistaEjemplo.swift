@@ -22,7 +22,7 @@ struct vista: View {
     
     @State private var autoCameraPosition = MapCameraPosition.automatic
     
-    @State private var isFollowingUser = true // Nueva propiedad para controlar si sigue la ubicación del usuario
+    @State  var isFollowingUser = true // Nueva propiedad para controlar si sigue la ubicación del usuario
 
     
     let distancias: [Double] = [200, 300, 400,  500, 600, 700, 800, 900, 1000, 1500, 2000, 2500]
@@ -37,7 +37,7 @@ struct vista: View {
                     .tint(.blue)
                 
                 MapCircle(center: centerCoordinate, radius: distanciaSeleccionada())
-                    .foregroundStyle(.blue.opacity(0.3))
+                    .foregroundStyle(.blue.opacity(0.2))
                 
 
             }
@@ -123,7 +123,7 @@ struct vista: View {
         )
         
         // Actualizamos la posición de la cámara con la nueva región y zoom
-        cameraPosition = .region(nuevaRegion)
+        autoCameraPosition = .region(nuevaRegion)
     }
     
     func actualizarRadioCirculo() {

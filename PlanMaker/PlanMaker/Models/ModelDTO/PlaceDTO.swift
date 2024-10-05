@@ -7,7 +7,20 @@
 
 import Foundation
 
-// Struct para cada lugar dentro de los resultados
+struct PlacesResponse: Codable {
+    let htmlAttributions: [String]
+    let nextPageToken: String?
+    let results: [PlaceDTO]
+    let status: String?
+
+    enum CodingKeys: String, CodingKey {
+        case htmlAttributions = "html_attributions"
+        case nextPageToken = "next_page_token"
+        case results
+        case status
+    }
+}
+
 struct PlaceDTO: Codable {
     let businessStatus: String?
     let geometry: Geometry
@@ -43,6 +56,13 @@ struct PlaceDTO: Codable {
         case vicinity
     }
 }
+
+extension PlaceDTO {
+    
+}
+
+
+
 
 // Struct para la geometría (latitud y longitud)
 struct Geometry: Codable {
@@ -97,17 +117,4 @@ struct PlusCode: Codable {
     }
 }
 
-// Struct para la respuesta principal
-struct PlacesResponse: Codable {
-    let htmlAttributions: [String]
-    let nextPageToken: String?
-    let results: [PlaceDTO]
-    let status: String?
 
-    enum CodingKeys: String, CodingKey {
-        case htmlAttributions = "html_attributions"
-        case nextPageToken = "next_page_token"
-        case results
-        case status
-    }
-}
