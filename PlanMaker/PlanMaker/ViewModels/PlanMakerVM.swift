@@ -13,6 +13,9 @@ final class PlanMakerVM: ObservableObject {
     
     var placesPerPage = 10
     
+    @Published var viewState: ViewState = .startView
+
+    
     @Published var nearbyPlaces: [Place] = []
     @Published var radius: Int = 200
     @Published var Coordenades: (latitude: Double, longitude: Double) = (40.4273,-3.6692)

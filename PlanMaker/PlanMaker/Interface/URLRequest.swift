@@ -20,7 +20,6 @@ extension URLRequest {
         request.timeoutInterval = 60
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Accept")
-        //request.setValue("Bearer lasjdlñajhsdlkajshdlkjh", forHTTPHeaderField: "Authorization")
         
         return request
     }

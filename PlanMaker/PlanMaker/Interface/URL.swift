@@ -9,7 +9,6 @@ import Foundation
 
 let mainURLMaps = URL(string:"https://maps.googleapis.com/maps/api/place")!
 let mainURLPlaces = URL(string: "https://places.googleapis.com/v1/places:")!
-//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.4273,-3.6692&radius=400&type=restaurant&key=AIzaSyBEk4IyUYkG-BDVRInk6k5bRYcHevIyRIA
 // searchNearby
 
 
