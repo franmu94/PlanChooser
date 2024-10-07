@@ -13,12 +13,12 @@ struct MainAppView: View {
     var body: some View {
         Group {
             switch vm.viewState {
-            case .startView:
-                TypesSelection()
+            case .filtersView:
+                FiltersView()
             case .selectionTypes:
-                TypesSelection()
+                FiltersView()
             case .mapRangeView:
-                TypesSelection()
+                FiltersView()
             }
         }
         .animation(.linear, value: vm.viewState)
@@ -32,7 +32,14 @@ struct MainAppView: View {
 
 
 enum ViewState {
-    case startView
+    case filtersView
     case selectionTypes
     case mapRangeView
+}
+
+enum FilterView {
+    case activities
+    case time
+    case map
+    case money
 }

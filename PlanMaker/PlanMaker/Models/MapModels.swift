@@ -18,6 +18,7 @@ struct LocationMap: Identifiable {
 
 
 enum RangosMapa: String, CaseIterable {
+    case nivel0 = "0 metros"
     case nivel1 = "200 metros"
     case nivel2 = "300 metros"
     case nivel3 = "400 metros"
@@ -26,14 +27,16 @@ enum RangosMapa: String, CaseIterable {
     case nivel6 = "700 metros"
     case nivel7 = "800 metros"
     case nivel8 = "900 metros"
-    case nivel9 = "1 KM"
-    case nivel10 = "1.5 KM"
-    case nivel11 = "2 KM"
-    case nivel12 = "2.5 KM"
+    case nivel9 = "1 km"
+    case nivel10 = "1.5 km"
+    case nivel11 = "2 km"
+    case nivel12 = "2.5 km"
     
     // Devolver el valor en metros como Double
     var metros: Double {
         switch self {
+        case .nivel0:
+            return 0
         case .nivel1:
             return 200.0
         case .nivel2:
@@ -63,17 +66,36 @@ enum RangosMapa: String, CaseIterable {
     
     // Calcular el zoom según los metros
     var zoom: Double {
-        if metros >= 1000 {
-            return metros / 50000.0
-        } else if metros >= 400 {
+        if metros >= 500 {
             return metros / 45000.0
         } else {
-            return 0.006
+            return 0.008
         }
     }
 }
 
+extension CLLocationCoordinate2D {
+    func distance(from coordenate: CLLocationCoordinate2D) -> Double {
+        let radioTierra: Double = 6371000 // Radio de la Tierra en metros
 
+        let lat1 = self.latitude * .pi / 180
+        let lon1 = self.longitude * .pi / 180
+        let lat2 = coordenate.latitude * .pi / 180
+        let lon2 = coordenate.longitude * .pi / 180
+
+        let diferenciaLatitud = lat2 - lat1
+        let diferenciaLongitud = lon2 - lon1
+
+        let a = sin(diferenciaLatitud / 2) * sin(diferenciaLatitud / 2) +
+                cos(lat1) * cos(lat2) * sin(diferenciaLongitud / 2) * sin(diferenciaLongitud / 2)
+        
+        let c = 2 * atan2(sqrt(a), sqrt(1 - a))
+        
+        let distancia = radioTierra * c
+
+        return distancia // Distancia en metros
+    }
+}
 
 
 

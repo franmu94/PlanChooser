@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D32F910A2CB47AE5008A666E /* MoneySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F91092CB47AE5008A666E /* MoneySelectionView.swift */; };
 		D35B507B2CAE966D00C2FBC7 /* UserLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B507A2CAE966D00C2FBC7 /* UserLocationView.swift */; };
 		D35B507D2CAE9C7600C2FBC7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B507C2CAE9C7600C2FBC7 /* LocationManager.swift */; };
 		D35B50812CAEFCA700C2FBC7 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50802CAEFCA700C2FBC7 /* URL.swift */; };
 		D35B50842CAF0C5400C2FBC7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50832CAF0C5400C2FBC7 /* Extensions.swift */; };
-		D35B50872CAF144E00C2FBC7 /* TypesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50862CAF144E00C2FBC7 /* TypesSelection.swift */; };
+		D35B50872CAF144E00C2FBC7 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50862CAF144E00C2FBC7 /* FiltersView.swift */; };
 		D35B50892CAF410000C2FBC7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50882CAF410000C2FBC7 /* Enums.swift */; };
 		D35B508D2CAF419400C2FBC7 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B508C2CAF419400C2FBC7 /* URLRequest.swift */; };
 		D35B508F2CAF41FD00C2FBC7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B508E2CAF41FD00C2FBC7 /* NetworkError.swift */; };
@@ -24,31 +25,33 @@
 		D35B50A12CB0562D00C2FBC7 /* APIPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50A02CB0562D00C2FBC7 /* APIPostModel.swift */; };
 		D35B50A32CB05A5F00C2FBC7 /* PlanMakerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50A22CB05A5F00C2FBC7 /* PlanMakerVM.swift */; };
 		D35B50A52CB06C4F00C2FBC7 /* EjemploLlamada2.0.json in Resources */ = {isa = PBXBuildFile; fileRef = D35B50A42CB06C4F00C2FBC7 /* EjemploLlamada2.0.json */; };
-		D35B50A72CB0B68B00C2FBC7 /* platilla2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50A62CB0B68B00C2FBC7 /* platilla2.swift */; };
 		D35B50AA2CB1329200C2FBC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35B50A92CB1329200C2FBC7 /* Assets.xcassets */; };
-		D35B50AC2CB178E100C2FBC7 /* prueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50AB2CB178E100C2FBC7 /* prueba.swift */; };
 		D35B50AF2CB1E63B00C2FBC7 /* TypeGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50AE2CB1E63B00C2FBC7 /* TypeGridCell.swift */; };
 		D35B50B12CB27CA600C2FBC7 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50B02CB27CA600C2FBC7 /* MainAppView.swift */; };
+		D35B50B42CB2867E00C2FBC7 /* configAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = D35B50B32CB2867E00C2FBC7 /* configAPI.plist */; };
+		D35B50B62CB287EC00C2FBC7 /* APPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50B52CB287EC00C2FBC7 /* APPConfig.swift */; };
+		D35B50B82CB28D8C00C2FBC7 /* CategoryTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50B72CB28D8C00C2FBC7 /* CategoryTypesView.swift */; };
+		D3635CBE2CB29D3C0034C45D /* FilterTitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3635CBD2CB29D3C0034C45D /* FilterTitleComponent.swift */; };
 		D36CB0862CAC630A00372C54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36CB0802CAC630A00372C54 /* Preview Assets.xcassets */; };
 		D36CB0882CAC630A00372C54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0832CAC630A00372C54 /* ContentView.swift */; };
 		D36CB0892CAC630A00372C54 /* PlanMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0842CAC630A00372C54 /* PlanMakerApp.swift */; };
 		D36CB0902CAC6DF300372C54 /* EjemploLlamadaRestaurantes.json in Resources */ = {isa = PBXBuildFile; fileRef = D36CB08F2CAC6DF300372C54 /* EjemploLlamadaRestaurantes.json */; };
 		D36CB0922CAC721800372C54 /* PlaceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0912CAC721800372C54 /* PlaceDTO.swift */; };
 		D36CB0942CAD4ABA00372C54 /* EjemploLlamadaDetalle.json in Resources */ = {isa = PBXBuildFile; fileRef = D36CB0932CAD4ABA00372C54 /* EjemploLlamadaDetalle.json */; };
-		D36CB0982CAD55BD00372C54 /* vistaMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0972CAD55BD00372C54 /* vistaMapa.swift */; };
-		D36CB09C2CAD9A4000372C54 /* vistaEjemplo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB09B2CAD9A4000372C54 /* vistaEjemplo.swift */; };
+		D36CB09C2CAD9A4000372C54 /* RangeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB09B2CAD9A4000372C54 /* RangeMapView.swift */; };
 		D36CB09E2CADA7D400372C54 /* MapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB09D2CADA7D400372C54 /* MapModels.swift */; };
 		D36CB0A22CADC19100372C54 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0A12CADC19100372C54 /* MapViewModel.swift */; };
-		D36CB0A42CADFAD700372C54 /* MapComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0A32CADFAD700372C54 /* MapComponent.swift */; };
-		D36CB0A62CAE051500372C54 /* SwifdddtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0A52CAE051500372C54 /* SwifdddtUIView.swift */; };
+		D37B70A42CB2B08E0074FEDF /* ActivitiesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B70A32CB2B08E0074FEDF /* ActivitiesSelectionView.swift */; };
+		D37B70A62CB2B1AC0074FEDF /* TimeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B70A52CB2B1AC0074FEDF /* TimeSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D32F91092CB47AE5008A666E /* MoneySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySelectionView.swift; sourceTree = "<group>"; };
 		D35B507A2CAE966D00C2FBC7 /* UserLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationView.swift; sourceTree = "<group>"; };
 		D35B507C2CAE9C7600C2FBC7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D35B50802CAEFCA700C2FBC7 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		D35B50832CAF0C5400C2FBC7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D35B50862CAF144E00C2FBC7 /* TypesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesSelection.swift; sourceTree = "<group>"; };
+		D35B50862CAF144E00C2FBC7 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 		D35B50882CAF410000C2FBC7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		D35B508C2CAF419400C2FBC7 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		D35B508E2CAF41FD00C2FBC7 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -61,11 +64,13 @@
 		D35B50A02CB0562D00C2FBC7 /* APIPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPostModel.swift; sourceTree = "<group>"; };
 		D35B50A22CB05A5F00C2FBC7 /* PlanMakerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMakerVM.swift; sourceTree = "<group>"; };
 		D35B50A42CB06C4F00C2FBC7 /* EjemploLlamada2.0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EjemploLlamada2.0.json; sourceTree = "<group>"; };
-		D35B50A62CB0B68B00C2FBC7 /* platilla2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = platilla2.swift; sourceTree = "<group>"; };
 		D35B50A92CB1329200C2FBC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D35B50AB2CB178E100C2FBC7 /* prueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prueba.swift; sourceTree = "<group>"; };
 		D35B50AE2CB1E63B00C2FBC7 /* TypeGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeGridCell.swift; sourceTree = "<group>"; };
 		D35B50B02CB27CA600C2FBC7 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
+		D35B50B32CB2867E00C2FBC7 /* configAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = configAPI.plist; sourceTree = "<group>"; };
+		D35B50B52CB287EC00C2FBC7 /* APPConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPConfig.swift; sourceTree = "<group>"; };
+		D35B50B72CB28D8C00C2FBC7 /* CategoryTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTypesView.swift; sourceTree = "<group>"; };
+		D3635CBD2CB29D3C0034C45D /* FilterTitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTitleComponent.swift; sourceTree = "<group>"; };
 		D36CB06F2CAC62A500372C54 /* PlanMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36CB0802CAC630A00372C54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D36CB0832CAC630A00372C54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,12 +78,11 @@
 		D36CB08F2CAC6DF300372C54 /* EjemploLlamadaRestaurantes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EjemploLlamadaRestaurantes.json; sourceTree = "<group>"; };
 		D36CB0912CAC721800372C54 /* PlaceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDTO.swift; sourceTree = "<group>"; };
 		D36CB0932CAD4ABA00372C54 /* EjemploLlamadaDetalle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EjemploLlamadaDetalle.json; sourceTree = "<group>"; };
-		D36CB0972CAD55BD00372C54 /* vistaMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vistaMapa.swift; sourceTree = "<group>"; };
-		D36CB09B2CAD9A4000372C54 /* vistaEjemplo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vistaEjemplo.swift; sourceTree = "<group>"; };
+		D36CB09B2CAD9A4000372C54 /* RangeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeMapView.swift; sourceTree = "<group>"; };
 		D36CB09D2CADA7D400372C54 /* MapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModels.swift; sourceTree = "<group>"; };
 		D36CB0A12CADC19100372C54 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		D36CB0A32CADFAD700372C54 /* MapComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponent.swift; sourceTree = "<group>"; };
-		D36CB0A52CAE051500372C54 /* SwifdddtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifdddtUIView.swift; sourceTree = "<group>"; };
+		D37B70A32CB2B08E0074FEDF /* ActivitiesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesSelectionView.swift; sourceTree = "<group>"; };
+		D37B70A52CB2B1AC0074FEDF /* TimeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +105,16 @@
 			path = Maps;
 			sourceTree = "<group>";
 		};
-		D35B507F2CAEFB8400C2FBC7 /* TypesSelection */ = {
+		D35B507F2CAEFB8400C2FBC7 /* filtersSelection */ = {
 			isa = PBXGroup;
 			children = (
-				D35B50862CAF144E00C2FBC7 /* TypesSelection.swift */,
+				D35B50862CAF144E00C2FBC7 /* FiltersView.swift */,
+				D37B70A32CB2B08E0074FEDF /* ActivitiesSelectionView.swift */,
+				D37B70A52CB2B1AC0074FEDF /* TimeSelectionView.swift */,
+				D36CB09B2CAD9A4000372C54 /* RangeMapView.swift */,
+				D32F91092CB47AE5008A666E /* MoneySelectionView.swift */,
 			);
-			path = TypesSelection;
+			path = filtersSelection;
 			sourceTree = "<group>";
 		};
 		D35B50822CAF0C3C00C2FBC7 /* Extensions */ = {
@@ -114,7 +122,6 @@
 			children = (
 				D35B50832CAF0C5400C2FBC7 /* Extensions.swift */,
 				D35B509A2CAF4A5900C2FBC7 /* platilla.swift */,
-				D35B50A62CB0B68B00C2FBC7 /* platilla2.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -123,9 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				D36CB0832CAC630A00372C54 /* ContentView.swift */,
-				D36CB0972CAD55BD00372C54 /* vistaMapa.swift */,
-				D36CB0A52CAE051500372C54 /* SwifdddtUIView.swift */,
-				D36CB09B2CAD9A4000372C54 /* vistaEjemplo.swift */,
 				D35B507A2CAE966D00C2FBC7 /* UserLocationView.swift */,
 			);
 			path = Maps;
@@ -261,9 +265,8 @@
 			children = (
 				D35B50B02CB27CA600C2FBC7 /* MainAppView.swift */,
 				D35B50852CAF0CB700C2FBC7 /* Maps */,
-				D35B507F2CAEFB8400C2FBC7 /* TypesSelection */,
+				D35B507F2CAEFB8400C2FBC7 /* filtersSelection */,
 				D36CB0962CAD548300372C54 /* Components */,
-				D35B50AB2CB178E100C2FBC7 /* prueba.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				D36CB0842CAC630A00372C54 /* PlanMakerApp.swift */,
+				D35B50B32CB2867E00C2FBC7 /* configAPI.plist */,
+				D35B50B52CB287EC00C2FBC7 /* APPConfig.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -279,8 +284,9 @@
 		D36CB0962CAD548300372C54 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D36CB0A32CADFAD700372C54 /* MapComponent.swift */,
 				D35B50AE2CB1E63B00C2FBC7 /* TypeGridCell.swift */,
+				D35B50B72CB28D8C00C2FBC7 /* CategoryTypesView.swift */,
+				D3635CBD2CB29D3C0034C45D /* FilterTitleComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D36CB0862CAC630A00372C54 /* Preview Assets.xcassets in Resources */,
+				D35B50B42CB2867E00C2FBC7 /* configAPI.plist in Resources */,
 				D35B509F2CAFEA7C00C2FBC7 /* listaPLacesNativa.json in Resources */,
 				D35B50A52CB06C4F00C2FBC7 /* EjemploLlamada2.0.json in Resources */,
 				D36CB0942CAD4ABA00372C54 /* EjemploLlamadaDetalle.json in Resources */,
@@ -363,29 +370,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35B509B2CAF4A5900C2FBC7 /* platilla.swift in Sources */,
-				D36CB0A62CAE051500372C54 /* SwifdddtUIView.swift in Sources */,
 				D35B50A32CB05A5F00C2FBC7 /* PlanMakerVM.swift in Sources */,
-				D36CB09C2CAD9A4000372C54 /* vistaEjemplo.swift in Sources */,
+				D36CB09C2CAD9A4000372C54 /* RangeMapView.swift in Sources */,
 				D35B508F2CAF41FD00C2FBC7 /* NetworkError.swift in Sources */,
+				D35B50B62CB287EC00C2FBC7 /* APPConfig.swift in Sources */,
 				D35B507B2CAE966D00C2FBC7 /* UserLocationView.swift in Sources */,
-				D35B50AC2CB178E100C2FBC7 /* prueba.swift in Sources */,
 				D35B507D2CAE9C7600C2FBC7 /* LocationManager.swift in Sources */,
-				D36CB0982CAD55BD00372C54 /* vistaMapa.swift in Sources */,
 				D35B50B12CB27CA600C2FBC7 /* MainAppView.swift in Sources */,
 				D36CB09E2CADA7D400372C54 /* MapModels.swift in Sources */,
 				D36CB0882CAC630A00372C54 /* ContentView.swift in Sources */,
 				D35B50932CAF437A00C2FBC7 /* NetworkInteractor.swift in Sources */,
-				D35B50A72CB0B68B00C2FBC7 /* platilla2.swift in Sources */,
+				D37B70A42CB2B08E0074FEDF /* ActivitiesSelectionView.swift in Sources */,
 				D35B508D2CAF419400C2FBC7 /* URLRequest.swift in Sources */,
+				D35B50B82CB28D8C00C2FBC7 /* CategoryTypesView.swift in Sources */,
+				D3635CBE2CB29D3C0034C45D /* FilterTitleComponent.swift in Sources */,
 				D35B50892CAF410000C2FBC7 /* Enums.swift in Sources */,
 				D36CB0A22CADC19100372C54 /* MapViewModel.swift in Sources */,
 				D35B50992CAF45B100C2FBC7 /* Place.swift in Sources */,
 				D35B50842CAF0C5400C2FBC7 /* Extensions.swift in Sources */,
 				D36CB0892CAC630A00372C54 /* PlanMakerApp.swift in Sources */,
-				D35B50872CAF144E00C2FBC7 /* TypesSelection.swift in Sources */,
+				D35B50872CAF144E00C2FBC7 /* FiltersView.swift in Sources */,
 				D35B50952CAF446E00C2FBC7 /* PlacesInteractor.swift in Sources */,
 				D35B50912CAF422100C2FBC7 /* URLSession.swift in Sources */,
-				D36CB0A42CADFAD700372C54 /* MapComponent.swift in Sources */,
+				D37B70A62CB2B1AC0074FEDF /* TimeSelectionView.swift in Sources */,
+				D32F910A2CB47AE5008A666E /* MoneySelectionView.swift in Sources */,
 				D35B50A12CB0562D00C2FBC7 /* APIPostModel.swift in Sources */,
 				D35B50AF2CB1E63B00C2FBC7 /* TypeGridCell.swift in Sources */,
 				D36CB0922CAC721800372C54 /* PlaceDTO.swift in Sources */,

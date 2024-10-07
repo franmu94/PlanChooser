@@ -26,8 +26,8 @@ struct UserLocationView: View {
             
             Button("Get location") {
                 locationManager.checkLocationAuthorization()
-                print("Latitude: \(locationManager.lastKnownLocation?.latitude)")
-                print("Longitude: \(locationManager.lastKnownLocation?.longitude)")
+//                print("Latitude: \(locationManager.lastKnownLocation?.latitude)")
+//                print("Longitude: \(locationManager.lastKnownLocation?.longitude)")
             }
             .buttonStyle(.borderedProminent)
         }
