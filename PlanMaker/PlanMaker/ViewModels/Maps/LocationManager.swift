@@ -10,10 +10,11 @@ import CoreLocation
 
 final class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
     
+    static let defaultLocation = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+
     @Published var lastKnownLocation: CLLocationCoordinate2D?
     
     var manager = CLLocationManager()
-    
     
     
     func checkLocationAuthorization() {

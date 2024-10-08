@@ -12,10 +12,21 @@ struct ActivitiesView: View {
 
     var body: some View {
         ScrollView {
-            CategoryTypesView(title: "Entertainment and Recreation",category: PlaceType.entertainmentAndRecreation())
-            CategoryTypesView(title: "Food and Drink",category: PlaceType.foodAndDrink())
-            CategoryTypesView(title: "Shopping",category: PlaceType.shopping())
+            VStack {
+                CategoryTypesView(title: "Entertainment and Recreation",category: PlaceType.entertainmentAndRecreation())
+                CategoryTypesView(title: "Food and Drink",category: PlaceType.foodAndDrink())
+                CategoryTypesView(title: "Shopping",category: PlaceType.shopping())
+            }
+            .onAppear {
+                    if #available(iOS 16, *) {
+                        UIScrollView.appearance().showsVerticalScrollIndicator = false
+                    } else {
+                        UIScrollView.appearance().showsVerticalScrollIndicator = false
+                        UIScrollView.appearance().showsHorizontalScrollIndicator = false
+                    }
+                }
         }
+        .scrollIndicators(.hidden)
     }
 }
 

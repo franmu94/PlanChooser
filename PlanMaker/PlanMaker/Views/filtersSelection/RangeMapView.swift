@@ -19,20 +19,17 @@ struct RangeMapView: View {
     @State var autoCameraPosition = MapCameraPosition.automatic
     @State var isFollowingUser = true
     
-    let rangos: [RangosMapa] =  RangosMapa.allCases
+    let rangos: [RangosMapa] =  Array(RangosMapa.allCases.dropFirst())
         
-    let centerCoordinate = CLLocationCoordinate2D(latitude: 41.427063, longitude: -3.669103)
     
     var body: some View {
         VStack {
             if let coordinate = locationManager.lastKnownLocation {
                 
                 Map(position: $autoCameraPosition) {
-                    Marker("",systemImage: "figure",  coordinate: coordinate)
-                        .tint(.blue)
-                    
                     MapCircle(center: coordinate, radius: vm.radius.metros)
                         .foregroundStyle(.blue.opacity(0.2))
+                    UserAnnotation()
                 }
                 .frame(height: UIDevice.width)
                 .onChange(of: sliderValue) {
@@ -44,10 +41,10 @@ struct RangeMapView: View {
                 .overlay(alignment: .bottomTrailing){
                     Button {
                         withAnimation(.linear(duration: 1)) {
-                            autoCameraPosition = .userLocation(followsHeading: true, fallback: .automatic)
+                            //autoCameraPosition = .userLocation(followsHeading: true, fallback: .automatic)
                             actualizarZoom()
                             Task {
-                                try? await Task.sleep(nanoseconds: 300_000_000)
+                                try? await Task.sleep(nanoseconds: 200_000_000)
                                 isFollowingUser = true
                             }
                         }
@@ -59,7 +56,6 @@ struct RangeMapView: View {
                                     .cornerRadius(4)
                                     .foregroundStyle(.gray)
                             }
-                        
                     }
                     .padding(20)
                     
@@ -79,7 +75,11 @@ struct RangeMapView: View {
             }
         }.onAppear {
             locationManager.checkLocationAuthorization()
-            actualizarZoom()
+            if vm.radius == .nivel0 {
+                actualizarZoom()
+            } else {
+                sliderValue = vm.radius.sliderValue
+            }
         }
     }
     
@@ -88,7 +88,7 @@ struct RangeMapView: View {
         vm.radius = rangos[index]
         
         let nuevaRegion = MKCoordinateRegion(
-            center: locationManager.lastKnownLocation ?? centerCoordinate,
+            center: locationManager.lastKnownLocation ?? LocationManager.defaultLocation,
             span: MKCoordinateSpan(latitudeDelta: vm.radius.zoom, longitudeDelta: vm.radius.zoom)
         )
         
@@ -103,5 +103,4 @@ struct RangeMapView: View {
 #Preview {
     RangeMapView()
         .environmentObject(PlanMakerVM())
-    
 }

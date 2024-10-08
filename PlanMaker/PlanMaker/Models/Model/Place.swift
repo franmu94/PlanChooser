@@ -25,14 +25,11 @@ import Foundation
 //    let vicinity: String?
 //}
 
-struct Place {
-    
+struct Place: Codable {
+    let name: String?
     let id: String?
-    let types: [String]?
-    let formattedAddress : String?
+    let location: LatLng?
+    let formattedAddress: String?
     let rating: Double?
-    let priceLevel: String?
-    let userRatingCount: Int?
-    let displayName: DisplayName?
-    let photos: [Photo]?
+    let priceLevel: PriceLevel
 }

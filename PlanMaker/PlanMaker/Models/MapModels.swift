@@ -32,7 +32,37 @@ enum RangosMapa: String, CaseIterable {
     case nivel11 = "2 km"
     case nivel12 = "2.5 km"
     
-    // Devolver el valor en metros como Double
+    var sliderValue: Double {
+        switch self {
+        case .nivel0:
+            return 0.0
+        case .nivel1:
+            return  1.0
+        case .nivel2:
+            return 2.0
+        case .nivel3:
+            return 3.0
+        case .nivel4:
+            return 4.0
+        case .nivel5:
+            return 5.0
+        case .nivel6:
+            return 6.0
+        case .nivel7:
+            return  7.0
+        case .nivel8:
+            return 8.0
+        case .nivel9:
+            return 9.0
+        case .nivel10:
+            return 9.0
+        case .nivel11:
+            return 10.0
+        case .nivel12:
+            return 11.0
+        }
+    }
+
     var metros: Double {
         switch self {
         case .nivel0:

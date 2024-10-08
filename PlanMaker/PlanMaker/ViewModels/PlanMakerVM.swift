@@ -13,13 +13,10 @@ final class PlanMakerVM: ObservableObject {
     
     var placesPerPage = 10
     
-    @Published var viewState: ViewState = .filtersView
     @Published var FilterViewState: FilterView = .activities
 
     
     @Published var nearbyPlaces: [Place] = []
-    @Published var radius: RangosMapa = .nivel0
-    @Published var Coordenades: (latitude: Double, longitude: Double) = (40.4273,-3.6692)
     @Published var selectedTypes: Set<PlaceType> = []
     
     @Published var startTime: Date = Date()
@@ -29,6 +26,11 @@ final class PlanMakerVM: ObservableObject {
     @Published var wantsBrunch: Bool = false
     @Published var wantsLunch: Bool = false
     @Published var wantsDinner: Bool = false
+    
+    @Published var radius: RangosMapa = .nivel0
+    @Published var Coordenades: (latitude: Double, longitude: Double) = (40.4273,-3.6692)
+    
+    @Published var priceLevel: PriceLevel = .PRICE_LEVEL_UNSPECIFIED
 
     init(interactor: PlacesInteractorProtocol = PlacesInteractor.shared) {
         self.interactor = interactor
@@ -95,5 +97,10 @@ final class PlanMakerVM: ObservableObject {
     
     func isDinnerTimeIncluded() -> Bool {
         return isTimeInRange(startHour: 18, endHour: 22)
+    }
+    
+    func conditionsToCall() -> Bool {
+        print("Se uso")
+        return !selectedTypes.isEmpty && timeIntervale != (0,0) && radius != .nivel0 && priceLevel != .PRICE_LEVEL_UNSPECIFIED
     }
 }

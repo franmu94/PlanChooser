@@ -13,7 +13,7 @@ struct PlanMakerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            FiltersView()
+            MainAppView()
                 .environmentObject(planMakerVM)
         }
     }

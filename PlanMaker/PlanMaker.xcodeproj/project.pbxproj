@@ -42,6 +42,8 @@
 		D36CB0A22CADC19100372C54 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0A12CADC19100372C54 /* MapViewModel.swift */; };
 		D37B70A42CB2B08E0074FEDF /* ActivitiesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B70A32CB2B08E0074FEDF /* ActivitiesSelectionView.swift */; };
 		D37B70A62CB2B1AC0074FEDF /* TimeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B70A52CB2B1AC0074FEDF /* TimeSelectionView.swift */; };
+		D3F43FEF2CB5786C00CF2CFA /* MapEjemploSean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F43FEE2CB5786C00CF2CFA /* MapEjemploSean.swift */; };
+		D3F43FF12CB592BF00CF2CFA /* ejemploLlamadaCompleta.json in Resources */ = {isa = PBXBuildFile; fileRef = D3F43FF02CB592BF00CF2CFA /* ejemploLlamadaCompleta.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		D36CB0A12CADC19100372C54 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D37B70A32CB2B08E0074FEDF /* ActivitiesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesSelectionView.swift; sourceTree = "<group>"; };
 		D37B70A52CB2B1AC0074FEDF /* TimeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionView.swift; sourceTree = "<group>"; };
+		D3F43FEE2CB5786C00CF2CFA /* MapEjemploSean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEjemploSean.swift; sourceTree = "<group>"; };
+		D3F43FF02CB592BF00CF2CFA /* ejemploLlamadaCompleta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ejemploLlamadaCompleta.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				D35B507A2CAE966D00C2FBC7 /* UserLocationView.swift */,
+				D3F43FEE2CB5786C00CF2CFA /* MapEjemploSean.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				D36CB0932CAD4ABA00372C54 /* EjemploLlamadaDetalle.json */,
 				D36CB08F2CAC6DF300372C54 /* EjemploLlamadaRestaurantes.json */,
 				D35B50A42CB06C4F00C2FBC7 /* EjemploLlamada2.0.json */,
+				D3F43FF02CB592BF00CF2CFA /* ejemploLlamadaCompleta.json */,
 			);
 			path = LlamadasAPIGoogle;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F43FF12CB592BF00CF2CFA /* ejemploLlamadaCompleta.json in Resources */,
 				D36CB0862CAC630A00372C54 /* Preview Assets.xcassets in Resources */,
 				D35B50B42CB2867E00C2FBC7 /* configAPI.plist in Resources */,
 				D35B509F2CAFEA7C00C2FBC7 /* listaPLacesNativa.json in Resources */,
@@ -372,6 +379,7 @@
 				D35B508F2CAF41FD00C2FBC7 /* NetworkError.swift in Sources */,
 				D35B50B62CB287EC00C2FBC7 /* APPConfig.swift in Sources */,
 				D35B507B2CAE966D00C2FBC7 /* UserLocationView.swift in Sources */,
+				D3F43FEF2CB5786C00CF2CFA /* MapEjemploSean.swift in Sources */,
 				D35B507D2CAE9C7600C2FBC7 /* LocationManager.swift in Sources */,
 				D35B50B12CB27CA600C2FBC7 /* MainAppView.swift in Sources */,
 				D36CB09E2CADA7D400372C54 /* MapModels.swift in Sources */,
