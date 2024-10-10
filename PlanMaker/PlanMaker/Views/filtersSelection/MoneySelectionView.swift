@@ -13,9 +13,7 @@ struct MoneySelectionView: View {
     let priceLevels = Array(PriceLevel.allCases.dropFirst(2))
     var body: some View {
         VStack {
-            Spacer()
             Text(vm.priceLevel.rawValue)
-            Spacer()
             HStack{
                 
                 ForEach(priceLevels, id: \.self) { priceLevel in
@@ -53,7 +51,9 @@ struct MoneySelectionView: View {
                     .padding(.top,32)
             }
             .buttonStyle(PlainButtonStyle())
-        }.padding(.bottom,54)
+        }
+        .padding(.bottom,48)
+        .padding(.top,24)
 
 
     

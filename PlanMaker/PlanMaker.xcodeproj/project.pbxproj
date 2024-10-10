@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D32F910A2CB47AE5008A666E /* MoneySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F91092CB47AE5008A666E /* MoneySelectionView.swift */; };
+		D34B05902CB7027B0038C87C /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34B058F2CB7027B0038C87C /* Test.swift */; };
+		D34B05922CB705280038C87C /* placeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34B05912CB705280038C87C /* placeCellView.swift */; };
+		D34B05942CB706730038C87C /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34B05932CB706730038C87C /* PreviewData.swift */; };
+		D34B05962CB7C6620038C87C /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34B05952CB7C6620038C87C /* Plan.swift */; };
 		D35B507B2CAE966D00C2FBC7 /* UserLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B507A2CAE966D00C2FBC7 /* UserLocationView.swift */; };
 		D35B507D2CAE9C7600C2FBC7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B507C2CAE9C7600C2FBC7 /* LocationManager.swift */; };
 		D35B50812CAEFCA700C2FBC7 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B50802CAEFCA700C2FBC7 /* URL.swift */; };
@@ -42,12 +46,18 @@
 		D36CB0A22CADC19100372C54 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB0A12CADC19100372C54 /* MapViewModel.swift */; };
 		D37B70A42CB2B08E0074FEDF /* ActivitiesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B70A32CB2B08E0074FEDF /* ActivitiesSelectionView.swift */; };
 		D37B70A62CB2B1AC0074FEDF /* TimeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B70A52CB2B1AC0074FEDF /* TimeSelectionView.swift */; };
+		D395A8EE2CB7EAD500C3A72E /* StarsRateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D395A8ED2CB7EAD500C3A72E /* StarsRateComponent.swift */; };
 		D3F43FEF2CB5786C00CF2CFA /* MapEjemploSean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F43FEE2CB5786C00CF2CFA /* MapEjemploSean.swift */; };
 		D3F43FF12CB592BF00CF2CFA /* ejemploLlamadaCompleta.json in Resources */ = {isa = PBXBuildFile; fileRef = D3F43FF02CB592BF00CF2CFA /* ejemploLlamadaCompleta.json */; };
+		D3F43FF32CB5DDE300CF2CFA /* pruebaTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F43FF22CB5DDE300CF2CFA /* pruebaTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D32F91092CB47AE5008A666E /* MoneySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySelectionView.swift; sourceTree = "<group>"; };
+		D34B058F2CB7027B0038C87C /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		D34B05912CB705280038C87C /* placeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeCellView.swift; sourceTree = "<group>"; };
+		D34B05932CB706730038C87C /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		D34B05952CB7C6620038C87C /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		D35B507A2CAE966D00C2FBC7 /* UserLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationView.swift; sourceTree = "<group>"; };
 		D35B507C2CAE9C7600C2FBC7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D35B50802CAEFCA700C2FBC7 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
@@ -83,8 +93,10 @@
 		D36CB0A12CADC19100372C54 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D37B70A32CB2B08E0074FEDF /* ActivitiesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesSelectionView.swift; sourceTree = "<group>"; };
 		D37B70A52CB2B1AC0074FEDF /* TimeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionView.swift; sourceTree = "<group>"; };
+		D395A8ED2CB7EAD500C3A72E /* StarsRateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsRateComponent.swift; sourceTree = "<group>"; };
 		D3F43FEE2CB5786C00CF2CFA /* MapEjemploSean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEjemploSean.swift; sourceTree = "<group>"; };
 		D3F43FF02CB592BF00CF2CFA /* ejemploLlamadaCompleta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ejemploLlamadaCompleta.json; sourceTree = "<group>"; };
+		D3F43FF22CB5DDE300CF2CFA /* pruebaTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebaTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,9 @@
 			children = (
 				D35B507A2CAE966D00C2FBC7 /* UserLocationView.swift */,
 				D3F43FEE2CB5786C00CF2CFA /* MapEjemploSean.swift */,
+				D3F43FF22CB5DDE300CF2CFA /* pruebaTab.swift */,
+				D34B058F2CB7027B0038C87C /* Test.swift */,
+				D34B05912CB705280038C87C /* placeCellView.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -150,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				D35B50982CAF45B100C2FBC7 /* Place.swift */,
+				D34B05952CB7C6620038C87C /* Plan.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,6 +219,7 @@
 				D35B509D2CAFEA6900C2FBC7 /* LlamadasAPINativa */,
 				D35B509C2CAFE99F00C2FBC7 /* LlamadasAPIGoogle */,
 				D36CB0802CAC630A00372C54 /* Preview Assets.xcassets */,
+				D34B05932CB706730038C87C /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -290,6 +307,7 @@
 				D35B50AE2CB1E63B00C2FBC7 /* TypeGridCell.swift */,
 				D35B50B72CB28D8C00C2FBC7 /* CategoryTypesView.swift */,
 				D3635CBD2CB29D3C0034C45D /* FilterTitleComponent.swift */,
+				D395A8ED2CB7EAD500C3A72E /* StarsRateComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -377,14 +395,19 @@
 				D35B50A32CB05A5F00C2FBC7 /* PlanMakerVM.swift in Sources */,
 				D36CB09C2CAD9A4000372C54 /* RangeMapView.swift in Sources */,
 				D35B508F2CAF41FD00C2FBC7 /* NetworkError.swift in Sources */,
+				D34B05962CB7C6620038C87C /* Plan.swift in Sources */,
 				D35B50B62CB287EC00C2FBC7 /* APPConfig.swift in Sources */,
 				D35B507B2CAE966D00C2FBC7 /* UserLocationView.swift in Sources */,
 				D3F43FEF2CB5786C00CF2CFA /* MapEjemploSean.swift in Sources */,
 				D35B507D2CAE9C7600C2FBC7 /* LocationManager.swift in Sources */,
+				D34B05902CB7027B0038C87C /* Test.swift in Sources */,
 				D35B50B12CB27CA600C2FBC7 /* MainAppView.swift in Sources */,
 				D36CB09E2CADA7D400372C54 /* MapModels.swift in Sources */,
+				D3F43FF32CB5DDE300CF2CFA /* pruebaTab.swift in Sources */,
 				D35B50932CAF437A00C2FBC7 /* NetworkInteractor.swift in Sources */,
 				D37B70A42CB2B08E0074FEDF /* ActivitiesSelectionView.swift in Sources */,
+				D34B05942CB706730038C87C /* PreviewData.swift in Sources */,
+				D34B05922CB705280038C87C /* placeCellView.swift in Sources */,
 				D35B508D2CAF419400C2FBC7 /* URLRequest.swift in Sources */,
 				D35B50B82CB28D8C00C2FBC7 /* CategoryTypesView.swift in Sources */,
 				D3635CBE2CB29D3C0034C45D /* FilterTitleComponent.swift in Sources */,
@@ -401,6 +424,7 @@
 				D35B50A12CB0562D00C2FBC7 /* APIPostModel.swift in Sources */,
 				D35B50AF2CB1E63B00C2FBC7 /* TypeGridCell.swift in Sources */,
 				D36CB0922CAC721800372C54 /* PlaceDTO.swift in Sources */,
+				D395A8EE2CB7EAD500C3A72E /* StarsRateComponent.swift in Sources */,
 				D35B50812CAEFCA700C2FBC7 /* URL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

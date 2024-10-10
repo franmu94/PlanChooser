@@ -16,7 +16,7 @@ struct PlacesResponse: Codable {
 struct PlaceDTO: Codable {
     let name: String?
     let id: String?
-    let types: [String]
+    let types: [String]?
     let nationalPhoneNumber: String?
     let internationalPhoneNumber: String?
     let formattedAddress: String?
@@ -77,7 +77,7 @@ struct PlusCode: Codable {
     let compoundCode: String?
 }
 
-struct LatLng: Codable {
+struct LatLng: Codable, Hashable {
     let latitude: Double
     let longitude: Double
 }
@@ -180,11 +180,12 @@ enum PriceLevel: String, CaseIterable, Codable {
 
 extension PlaceDTO {
     var toPlace: Place {
-        Place(name: name,
+        Place(name: name ?? "No identificado",
               id: id,
+              displayname: displayName?.text ?? "No odentificado",
               location: location,
               formattedAddress: formattedAddress,
-              rating: rating,
+              rating: rating ?? 0.0,
               priceLevel: priceLevel ?? .PRICE_LEVEL_UNSPECIFIED
         )
     }

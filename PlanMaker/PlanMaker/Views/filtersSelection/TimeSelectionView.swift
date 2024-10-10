@@ -13,6 +13,10 @@ struct TimeSelection: View {
     var body: some View {
         
         VStack {
+            Text("\(vm.timeIntervale.0) h \(vm.timeIntervale.1) m")
+                .font(.system(size: 40, weight: .regular, design: .rounded))
+                .multilineTextAlignment(.center)
+                .padding()
             VStack (alignment: .trailing){
                 HStack {
                     Text("From")
@@ -20,7 +24,6 @@ struct TimeSelection: View {
                     DatePicker(
                         "Start Time",
                         selection: $vm.startTime,
-                        //in: Date()..., // Limitar la selección a partir de la fecha/hora actual
                         displayedComponents: .hourAndMinute
                     )
                     .labelsHidden()
@@ -44,42 +47,34 @@ struct TimeSelection: View {
                     
                 }
             }
-            Text("\(vm.timeIntervale.0) h \(vm.timeIntervale.1) m")
-                .font(.system(size: 40, weight: .regular, design: .rounded))
-                .multilineTextAlignment(.center)
-                .padding()
-            
-            if vm.isBreakfastTimeIncluded() && vm.timeIntervale != (0,0) {
-                Toggle(isOn: $vm.wantsBreakfast) {
-                    Text("Want breakfast?")
-                }
-                .padding()
-            }
-            
-            if vm.isBrunchTimeIncluded() && vm.timeIntervale != (0,0) {
-                Toggle(isOn: $vm.wantsBrunch) {
-                    Text("Want brunc?")
-                }
-                .padding()
-            }
-            
-            if vm.isLunchTimeIncluded() && vm.timeIntervale != (0,0) {
-                Toggle(isOn: $vm.wantsLunch) {
-                    Text("Want lunch?")
-                }
-                .padding()
-                .opacity(vm.isLunchTimeIncluded() ? 1 : 0)
-            }
-            
-            if vm.isDinnerTimeIncluded() && vm.timeIntervale != (0,0) {
-                Toggle(isOn: $vm.wantsDinner) {
-                    Text("Want dinner?")
-                }
-                .padding()
-            }
-            
         }
-        .padding()
+            Group {
+                if vm.isBrunchTimeIncluded() && vm.timeIntervale != (0,0) {
+                    Toggle(isOn: $vm.wantsBreakfast) {
+                        Text("Want breakfast?")
+                    }
+                }
+                
+                if vm.isLunchTimeIncluded() && vm.timeIntervale != (0,0) {
+                    Toggle(isOn: $vm.wantsBrunch) {
+                        Text("Want brunc?")
+                    }
+                }
+                
+                if vm.isLunchTimeIncluded() && vm.timeIntervale != (0,0) {
+                    Toggle(isOn: $vm.wantsLunch) {
+                        Text("Want lunch?")
+                    }
+                }
+                
+                if vm.isDinnerTimeIncluded() && vm.timeIntervale != (0,0) {
+                    Toggle(isOn: $vm.wantsDinner) {
+                        Text("Want dinner?")
+                    }
+                }
+            }
+            .padding(.vertical, 8)
+            .padding(.horizontal, UIDevice.width * 0.15)
     }
 }
 

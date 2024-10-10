@@ -9,6 +9,7 @@ import Foundation
 
 
 struct LocationRestriction: Codable {
+    
     struct Circle: Codable {
         struct Center: Codable {
             let latitude: Double
@@ -19,6 +20,7 @@ struct LocationRestriction: Codable {
     }
     let circle: Circle
 }
+
 
 struct SearchRequest: Codable {
     let includedTypes: [String]

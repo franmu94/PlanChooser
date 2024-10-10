@@ -5,6 +5,8 @@
 //  Created by Fran Malo on 3/10/24.
 //
 
+import SwiftUI
+import MapKit
 import Foundation
 
 //struct Place {
@@ -25,11 +27,29 @@ import Foundation
 //    let vicinity: String?
 //}
 
-struct Place: Codable {
+struct Place: Codable, Identifiable, Hashable {
+    
     let name: String?
     let id: String?
+    let displayname: String
     let location: LatLng?
     let formattedAddress: String?
-    let rating: Double?
+    let rating: Double
     let priceLevel: PriceLevel
+    
+    
+    
+    
+    func distanceFromUser(userLocation: CLLocationCoordinate2D) -> CLLocationDistance {
+        guard let placeLocation = location else {
+            return .greatestFiniteMagnitude
+        }
+        let placeCLLocation = CLLocation(latitude: placeLocation.latitude, longitude: placeLocation.longitude)
+        let userCLLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
+        let d = userCLLocation.distance(from: placeCLLocation)
+
+        return d
+    }
 }
+
+

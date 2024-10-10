@@ -90,7 +90,7 @@ enum RangosMapa: String, CaseIterable {
         case .nivel11:
             return 2000.0
         case .nivel12:
-            return 2500.0
+            return 25000.0
         }
     }
     
@@ -123,7 +123,7 @@ extension CLLocationCoordinate2D {
         
         let distancia = radioTierra * c
 
-        return distancia // Distancia en metros
+        return distancia
     }
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 
 let mainURLMaps = URL(string:"https://maps.googleapis.com/maps/api/place")!
-let mainURLPlaces = URL(string: "https://places.googleapis.com/v1/places:")!
+let mainURLPlaces = URL(string: "https://places.googleapis.com/v1/places:searchNearby")!
 // searchNearby
 
 

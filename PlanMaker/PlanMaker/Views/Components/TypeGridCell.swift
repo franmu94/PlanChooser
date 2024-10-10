@@ -8,25 +8,24 @@
 import SwiftUI
 
 struct TypeGridCell: View {
-    @EnvironmentObject var vm: PlanMakerVM
-
     let type: PlaceType
+    let isSelected: Bool
     
     var body: some View {
         VStack{
-            Image("\(type.rawValue)\(vm.containsType(type: type) ? ".color" : "")")
+            Image("\(type.rawValue)\(isSelected ? ".colored" : "")")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 56)
             Text(type.displayText())
-                .font(.caption) // Ajusta el tamaño del texto
-                .frame(maxWidth: 72) // Limita el ancho del texto al de la imagen
+                .font(.caption)
+                .frame(maxWidth: 72)
                 .multilineTextAlignment(.center)
         }
     }
 }
 
 #Preview {
-    TypeGridCell(type: .restaurant)
+    TypeGridCell(type: .restaurant, isSelected: false)
         .environmentObject(PlanMakerVM())
 }

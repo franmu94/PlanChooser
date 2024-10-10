@@ -13,8 +13,6 @@ struct CategoryTypesView: View {
     let category: [PlaceType]
     
     @EnvironmentObject var vm: PlanMakerVM
-
-    var gridColums = [GridItem(), GridItem(), GridItem(), GridItem()]
     
     var body: some View {
         Text(title)
@@ -35,7 +33,7 @@ struct CategoryTypesView: View {
                                 vm.addType(type: type)
                             }
                         } label: {
-                            TypeGridCell(type: type)
+                            TypeGridCell(type: type, isSelected: vm.containsType(type: type))
                         }
                         .buttonStyle(PlainButtonStyle())
                     }

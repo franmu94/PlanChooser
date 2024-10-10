@@ -5,18 +5,34 @@
 //  Created by Fran Malo on 4/10/24.
 //
 
-import Foundation
+import SwiftUI
+
+enum OrderCriteria {
+    case near
+    case rate
+}
 
 
 final class PlanMakerVM: ObservableObject {
+    
+    var locationManager = LocationManager()
+    
     let interactor: PlacesInteractorProtocol
     
     var placesPerPage = 10
     
-    @Published var FilterViewState: FilterView = .activities
-
+    var orderCriteria: OrderCriteria = .near
     
-    @Published var nearbyPlaces: [Place] = []
+    @Published var FilterViewState: FilterView = .activities
+    
+    
+    var nearbyPlaces = Set<Place>() {
+        didSet {
+            updateSortedPlaces()
+        }
+    }
+    
+    @Published var sortedPlaces: [Place] = []
     @Published var selectedTypes: Set<PlaceType> = []
     
     @Published var startTime: Date = Date()
@@ -28,21 +44,25 @@ final class PlanMakerVM: ObservableObject {
     @Published var wantsDinner: Bool = false
     
     @Published var radius: RangosMapa = .nivel0
-    @Published var Coordenades: (latitude: Double, longitude: Double) = (40.4273,-3.6692)
     
     @Published var priceLevel: PriceLevel = .PRICE_LEVEL_UNSPECIFIED
 
     init(interactor: PlacesInteractorProtocol = PlacesInteractor.shared) {
         self.interactor = interactor
+        locationManager.checkLocationAuthorization()
     }
     func fetchNearbyPlaces() async {
         do {
-            let places = try await interactor.getNearbyPlaces(includedTypes: Array(selectedTypes), latitudeCenter: Coordenades.latitude, longitudeCenter: Coordenades.longitude, radius: Int(radius.metros))
+            print("Se llama en el VM")
+            let places: [Place] = try await interactor.getNearbyPlaces(includedTypes: Array(selectedTypes),
+                                                                       latitudeCenter: locationManager.lastKnownLocation?.latitude ?? .greatestFiniteMagnitude,
+                                                                       longitudeCenter: locationManager.lastKnownLocation?.longitude ?? .greatestFiniteMagnitude,
+                                                                       radius: Int(radius.metros), number: 5)
             await MainActor.run {
-                self.nearbyPlaces += places
+                self.nearbyPlaces.formUnion(places)
             }
         } catch {
-            
+            print(error.localizedDescription)
         }
     }
     
@@ -100,7 +120,22 @@ final class PlanMakerVM: ObservableObject {
     }
     
     func conditionsToCall() -> Bool {
-        print("Se uso")
         return !selectedTypes.isEmpty && timeIntervale != (0,0) && radius != .nivel0 && priceLevel != .PRICE_LEVEL_UNSPECIFIED
     }
+    
+    
+    
+    func updateSortedPlaces() {
+            switch orderCriteria {
+            case .near:
+                guard let userLocation = locationManager.lastKnownLocation else { return }
+                sortedPlaces = nearbyPlaces.sorted {
+                    let distance1 = $0.distanceFromUser(userLocation: userLocation)
+                    let distance2 = $1.distanceFromUser(userLocation: userLocation)
+                    return distance1 < distance2
+                }
+            case .rate:
+                sortedPlaces = nearbyPlaces.sorted { $0.rating < $1.rating }
+            }
+        }
 }

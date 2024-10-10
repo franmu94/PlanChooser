@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct PlanMakerApp: App {
     @StateObject var planMakerVM = PlanMakerVM()
+    
 
     var body: some Scene {
         WindowGroup {

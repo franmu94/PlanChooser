@@ -12,7 +12,7 @@ import CoreLocation
 
 struct RangeMapView: View {
     @EnvironmentObject var vm: PlanMakerVM
-    @StateObject private var locationManager = LocationManager()
+//    @StateObject private var locationManager = LocationManager()
     
     
     @State var sliderValue: Double = 0
@@ -24,7 +24,7 @@ struct RangeMapView: View {
     
     var body: some View {
         VStack {
-            if let coordinate = locationManager.lastKnownLocation {
+            if let coordinate = vm.locationManager.lastKnownLocation {
                 
                 Map(position: $autoCameraPosition) {
                     MapCircle(center: coordinate, radius: vm.radius.metros)
@@ -44,9 +44,10 @@ struct RangeMapView: View {
                             //autoCameraPosition = .userLocation(followsHeading: true, fallback: .automatic)
                             actualizarZoom()
                             Task {
-                                try? await Task.sleep(nanoseconds: 200_000_000)
+                                //try? await Task.sleep(nanoseconds: 200_000_000)
                                 isFollowingUser = true
                             }
+                            
                         }
                     } label: {
                         Image(systemName: isFollowingUser ? "location.fill" : "location")
@@ -72,9 +73,14 @@ struct RangeMapView: View {
                     Slider(value: $sliderValue, in: 0...Double((rangos.count)-1), step: 1)
                         .padding(.horizontal, 50)
                 }
+            } else {
+                VStack {
+                    Text("This app needs Lonation Permissions")
+                    Image(systemName: "map")
+                }
             }
         }.onAppear {
-            locationManager.checkLocationAuthorization()
+           // vm.locationManager.checkLocationAuthorization()
             if vm.radius == .nivel0 {
                 actualizarZoom()
             } else {
@@ -88,7 +94,7 @@ struct RangeMapView: View {
         vm.radius = rangos[index]
         
         let nuevaRegion = MKCoordinateRegion(
-            center: locationManager.lastKnownLocation ?? LocationManager.defaultLocation,
+            center: vm.locationManager.lastKnownLocation ?? LocationManager.defaultLocation,
             span: MKCoordinateSpan(latitudeDelta: vm.radius.zoom, longitudeDelta: vm.radius.zoom)
         )
         

@@ -9,43 +9,50 @@ import SwiftUI
 
 struct MainAppView: View {
     @EnvironmentObject var vm: PlanMakerVM
+    @State var isCaminoBlue = false
+    
     
     var body: some View {
-        
-        
         TabView {
-            FiltersView()
-                .tabItem {
-                    Image(systemName: "square.stack.fill")
-                    Text("Old Plans")
-                    
-                }
-            FiltersView()
-                .tabItem {
-                    Image(systemName: "mappin.and.ellipse")
-                    Text("Favorite Places")
-                    
-                }
-            FiltersView()
-                .tabItem {
-                    Image(systemName: "plus")
-                        .renderingMode(.template)
-                        .foregroundColor(.red)
-                    Text("New Plan")
-                    
-                }
-            FiltersView()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Settings")
-                    
-                }
-            FiltersView()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Settings")
-                    
-                }
+            
+            Tab("Old PLans", systemImage: "square.stack.fill") {
+                Text("Old PLans")
+                    .onAppear{
+                        isCaminoBlue = false
+                    }
+            }
+            
+            Tab("My Places", systemImage: "mappin.and.ellipse") {
+                Text("My Places")
+                    .onAppear{
+                        isCaminoBlue = false
+                    }
+            }
+            
+            Tab("New Plan", systemImage:  "plus") {
+                FiltersView()
+                    .onAppear{
+                        isCaminoBlue = false
+                    }
+            }
+            
+            
+            Tab("Running Plan", image: isCaminoBlue ? "camino.blue" : "camino.gray") {
+                Text("Running Plan")
+                    .onAppear{
+                        isCaminoBlue = true
+                    }
+            }
+            
+            Tab("Settings", systemImage: "gear") {
+                Test()
+                    .onAppear{
+                        isCaminoBlue = false
+                    }
+            }
+            
+            
+
         }
     }
 }
@@ -61,3 +68,5 @@ enum FilterView {
     case map
     case money
 }
+
+
