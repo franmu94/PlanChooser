@@ -16,7 +16,7 @@ struct MainAppView: View {
         TabView {
             
             Tab("Old PLans", systemImage: "square.stack.fill") {
-                Text("Old PLans")
+                PrePLan()
                     .onAppear{
                         isCaminoBlue = false
                     }

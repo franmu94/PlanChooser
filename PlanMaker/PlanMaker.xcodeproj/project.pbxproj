@@ -47,6 +47,8 @@
 		D37B70A42CB2B08E0074FEDF /* ActivitiesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B70A32CB2B08E0074FEDF /* ActivitiesSelectionView.swift */; };
 		D37B70A62CB2B1AC0074FEDF /* TimeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B70A52CB2B1AC0074FEDF /* TimeSelectionView.swift */; };
 		D395A8EE2CB7EAD500C3A72E /* StarsRateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D395A8ED2CB7EAD500C3A72E /* StarsRateComponent.swift */; };
+		D39BFF892CBBEEB000ED0DC6 /* PrePLan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BFF882CBBEEB000ED0DC6 /* PrePLan.swift */; };
+		D39BFF8D2CBC1C6A00ED0DC6 /* TypePlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BFF8C2CBC1C6A00ED0DC6 /* TypePlanCell.swift */; };
 		D3F43FEF2CB5786C00CF2CFA /* MapEjemploSean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F43FEE2CB5786C00CF2CFA /* MapEjemploSean.swift */; };
 		D3F43FF12CB592BF00CF2CFA /* ejemploLlamadaCompleta.json in Resources */ = {isa = PBXBuildFile; fileRef = D3F43FF02CB592BF00CF2CFA /* ejemploLlamadaCompleta.json */; };
 		D3F43FF32CB5DDE300CF2CFA /* pruebaTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F43FF22CB5DDE300CF2CFA /* pruebaTab.swift */; };
@@ -94,6 +96,8 @@
 		D37B70A32CB2B08E0074FEDF /* ActivitiesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesSelectionView.swift; sourceTree = "<group>"; };
 		D37B70A52CB2B1AC0074FEDF /* TimeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionView.swift; sourceTree = "<group>"; };
 		D395A8ED2CB7EAD500C3A72E /* StarsRateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsRateComponent.swift; sourceTree = "<group>"; };
+		D39BFF882CBBEEB000ED0DC6 /* PrePLan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrePLan.swift; sourceTree = "<group>"; };
+		D39BFF8C2CBC1C6A00ED0DC6 /* TypePlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePlanCell.swift; sourceTree = "<group>"; };
 		D3F43FEE2CB5786C00CF2CFA /* MapEjemploSean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEjemploSean.swift; sourceTree = "<group>"; };
 		D3F43FF02CB592BF00CF2CFA /* ejemploLlamadaCompleta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ejemploLlamadaCompleta.json; sourceTree = "<group>"; };
 		D3F43FF22CB5DDE300CF2CFA /* pruebaTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebaTab.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				D3F43FF22CB5DDE300CF2CFA /* pruebaTab.swift */,
 				D34B058F2CB7027B0038C87C /* Test.swift */,
 				D34B05912CB705280038C87C /* placeCellView.swift */,
+				D39BFF882CBBEEB000ED0DC6 /* PrePLan.swift */,
+				D39BFF8C2CBC1C6A00ED0DC6 /* TypePlanCell.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 			files = (
 				D35B509B2CAF4A5900C2FBC7 /* platilla.swift in Sources */,
 				D35B50A32CB05A5F00C2FBC7 /* PlanMakerVM.swift in Sources */,
+				D39BFF892CBBEEB000ED0DC6 /* PrePLan.swift in Sources */,
 				D36CB09C2CAD9A4000372C54 /* RangeMapView.swift in Sources */,
 				D35B508F2CAF41FD00C2FBC7 /* NetworkError.swift in Sources */,
 				D34B05962CB7C6620038C87C /* Plan.swift in Sources */,
@@ -419,6 +426,7 @@
 				D35B50872CAF144E00C2FBC7 /* FiltersView.swift in Sources */,
 				D35B50952CAF446E00C2FBC7 /* PlacesInteractor.swift in Sources */,
 				D35B50912CAF422100C2FBC7 /* URLSession.swift in Sources */,
+				D39BFF8D2CBC1C6A00ED0DC6 /* TypePlanCell.swift in Sources */,
 				D37B70A62CB2B1AC0074FEDF /* TimeSelectionView.swift in Sources */,
 				D32F910A2CB47AE5008A666E /* MoneySelectionView.swift in Sources */,
 				D35B50A12CB0562D00C2FBC7 /* APIPostModel.swift in Sources */,

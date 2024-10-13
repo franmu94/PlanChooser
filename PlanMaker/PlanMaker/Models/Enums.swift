@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum PlaceType: String, CaseIterable {
+enum PlaceType: String, CaseIterable, Hashable, Codable {
     // Automotive
     case carDealer = "car_dealer"
     case carRental = "car_rental"

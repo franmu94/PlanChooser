@@ -33,7 +33,7 @@ final class PlanMakerVM: ObservableObject {
     }
     
     @Published var sortedPlaces: [Place] = []
-    @Published var selectedTypes: Set<PlaceType> = []
+    @Published var selectedTypes: [PlaceType] = []
     
     @Published var startTime: Date = Date()
     @Published var endTime: Date = Date()
@@ -71,11 +71,12 @@ final class PlanMakerVM: ObservableObject {
     }
     
     func addType(type: PlaceType) {
-        selectedTypes.insert(type)
+        selectedTypes.append(type)
     }
     
     func quitType(type: PlaceType) {
-        selectedTypes.remove(type)
+        guard let index = selectedTypes.firstIndex(where: {$0 == type }) else { return }
+        selectedTypes.remove(at: index)
     }
     
     func calculateTimeDifference() {
@@ -138,4 +139,8 @@ final class PlanMakerVM: ObservableObject {
                 sortedPlaces = nearbyPlaces.sorted { $0.rating < $1.rating }
             }
         }
+    
+    func arrayTypes() -> [PlaceType] {
+        Array(selectedTypes)
+    }
 }

@@ -16,7 +16,7 @@ struct PlacesResponse: Codable {
 struct PlaceDTO: Codable {
     let name: String?
     let id: String?
-    let types: [String]?
+    let types: [PlaceType]?
     let nationalPhoneNumber: String?
     let internationalPhoneNumber: String?
     let formattedAddress: String?
@@ -174,6 +174,23 @@ enum PriceLevel: String, CaseIterable, Codable {
             4
         }
     }
+    
+    var descriptionEuro: String {
+        switch self {
+        case .PRICE_LEVEL_UNSPECIFIED:
+            "-"
+        case .PRICE_LEVEL_FREE:
+            "Free"
+        case .PRICE_LEVEL_INEXPENSIVE:
+            "€"
+        case .PRICE_LEVEL_MODERATE:
+            "€€"
+        case .PRICE_LEVEL_EXPENSIVE:
+            "€€€"
+        case .PRICE_LEVEL_VERY_EXPENSIVE:
+            "€€€€"
+        }
+    }
 }
 
 
@@ -186,7 +203,8 @@ extension PlaceDTO {
               location: location,
               formattedAddress: formattedAddress,
               rating: rating ?? 0.0,
-              priceLevel: priceLevel ?? .PRICE_LEVEL_UNSPECIFIED
+              priceLevel: priceLevel ?? .PRICE_LEVEL_UNSPECIFIED,
+              primaryType: primaryType ?? "no"
         )
     }
 }

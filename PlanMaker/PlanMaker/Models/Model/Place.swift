@@ -36,6 +36,7 @@ struct Place: Codable, Identifiable, Hashable {
     let formattedAddress: String?
     let rating: Double
     let priceLevel: PriceLevel
+    let primaryType: String
     
     
     
